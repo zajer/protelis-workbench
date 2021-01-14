@@ -2,8 +2,18 @@ module gradient_obs
 
 import gradient
 
-if (env.has("obstacle")) {
-	POSITIVE_INFINITY
-} else {
+if (env.has("obstacle") ) 
+{
+	if ( self.getDeviceUID().getId() == 153 ) 
+	{
+		env.remove ("obstacle")
+	}
+	else
+	{
+		POSITIVE_INFINITY
+	}
+} 
+else 
+{
 	gradient ( self.getDeviceUID().getId() == 0 )
 }

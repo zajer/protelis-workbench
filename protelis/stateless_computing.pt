@@ -1,0 +1,16 @@
+module stateless
+
+
+def factorial ( n ) =
+	if (n > 1) 
+	{ 
+		n * factorial (n-1) 
+	} 
+	else 
+	{ 
+		1 
+	} 
+let myVar = 3;
+myVar = factorial ( myVar ); //bad programming practice
+myVar
+

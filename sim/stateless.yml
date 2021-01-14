@@ -1,0 +1,10 @@
+incarnation: protelis
+displacements:
+  - in:
+      type: Point
+      parameters: [5, 5, 5]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: stateless_computing
+        - program: send
