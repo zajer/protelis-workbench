@@ -34,7 +34,7 @@
       "val": 6
     },
     "molFilter": true,
-    "molString": "stateless",
+    "molString": "state",
     "molPropertyFilter": true,
     "property": "",
     "writingPropertyValue": true,

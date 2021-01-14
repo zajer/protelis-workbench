@@ -1,0 +1,14 @@
+module state
+
+def myFun1 ( v ) =
+	if ( true ) 
+	{
+		v + 1
+	}
+	else
+	{
+		env.put("yolo", "swag")
+		v + 7
+	}
+	
+myFun1(7)

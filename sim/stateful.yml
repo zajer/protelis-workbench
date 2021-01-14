@@ -1,0 +1,10 @@
+incarnation: protelis
+displacements:
+  - in:
+      type: Circle
+      parameters: [50, 0, 0, 15]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: stateful_computing
+        - program: send
