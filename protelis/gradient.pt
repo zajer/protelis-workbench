@@ -1,0 +1,21 @@
+module gradient
+
+public def gradient(source) =
+  rep (d <- POSITIVE_INFINITY) 
+  {
+    mux (source) 
+    { 
+    	0 
+    } 
+    else 
+    {
+    	let nbr_dist =  nbr(d);
+    	let dist_total = nbr_dist + self.nbrRange();
+    	let dist2nbr = self.nbrRange();
+    	//minHood([dist_total, POSITIVE_INFINITY]) 
+    	//minHood(dist_total)
+    	foldMin( POSITIVE_INFINITY, nbr_dist + dist2nbr)
+    }
+  }
+
+gradient(self.getDeviceUID().getId() == 0)

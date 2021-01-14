@@ -1,0 +1,6 @@
+module diode
+
+rep ( status <- false) 
+{
+	!status
+}

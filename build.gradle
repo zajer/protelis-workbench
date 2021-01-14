@@ -1,0 +1,43 @@
+//sim - A simulation file name. Defines simulation scenario to be launched.
+//effects - An effects (.aes) file name. If empty the file has the same name as the simulation.
+
+if ( sim == 'default_sim' ){
+	println "Empty simulation file. Exiting..."
+	throw new InvalidUserDataException('Empty simulation file. Please specify it as "sim" parameter')
+}
+
+if ( effects == 'default_effects' ) {
+	println "Empty effects file name. Changing to $sim"
+	effects = sim
+}
+
+println "sim = $sim"
+println "effects = $effects"
+
+apply plugin: 'java'
+
+repositories { mavenCentral() }
+
+dependencies { implementation( "it.unibo.alchemist:alchemist:9.3.0") }
+
+task "run"(type: JavaExec){ 
+  classpath = sourceSets.main.runtimeClasspath 
+  classpath 'protelis'
+  main = 'it.unibo.alchemist.Alchemist'
+  args(
+    "-y", "sim/${sim}.yml",
+    "-g", "effects/${effects}.aes"
+  )
+}
+
+task "run-slim"(type: JavaExec){ 
+  classpath = sourceSets.main.runtimeClasspath 
+  classpath 'protelis'
+  main = 'it.unibo.alchemist.Alchemist'
+  args(
+    "-y", "sim/${sim}.yml"
+  )
+}
+
+defaultTasks "run-slim"
+

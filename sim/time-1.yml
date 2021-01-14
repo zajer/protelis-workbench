@@ -1,0 +1,11 @@
+incarnation: protelis
+displacements:
+  - in:
+      type: Grid
+      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: diode
+        - program: send
+

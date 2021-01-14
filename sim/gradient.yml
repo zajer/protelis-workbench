@@ -1,0 +1,13 @@
+incarnation: protelis
+network-model:
+  type: ConnectWithinDistance
+  parameters: [10]
+displacements:
+  - in:
+      type: Circle
+      parameters: [250, 0, 0, 50]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: gradient
+        - program: send

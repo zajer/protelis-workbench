@@ -1,0 +1,9 @@
+module gradient_obs
+
+import gradient
+
+if (env.has("obstacle")) {
+	POSITIVE_INFINITY
+} else {
+	gradient ( self.getDeviceUID().getId() == 0 )
+}

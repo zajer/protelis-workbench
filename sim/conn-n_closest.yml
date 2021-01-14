@@ -1,0 +1,8 @@
+incarnation: protelis
+network-model:
+  type: ClosestN
+  parameters: [1,2,3,4,5]
+displacements:
+  - in:
+      type: Circle
+      parameters: [150, 0, 0, 50]
