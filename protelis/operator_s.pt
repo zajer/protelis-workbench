@@ -1,0 +1,18 @@
+module groups
+import protelis:coord:sparsechoice
+import protelis:coord:spreading
+
+
+def groups ( sog ) 
+{
+	let metric = { self.nbrRange() };
+	let am_i_a_leader = S(sog,metric);
+	let my_id = self.getDeviceUID().getId();
+	G(am_i_a_leader, my_id, metric, { v -> v})
+}
+
+
+groups ( 50)
+
+	
+
