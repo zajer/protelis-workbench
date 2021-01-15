@@ -1,0 +1,10 @@
+incarnation: protelis
+displacements:
+  - in:
+      type: Circle
+      parameters: [250, 0, 0, 200]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: operator_t
+        - program: send

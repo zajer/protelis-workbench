@@ -1,0 +1,8 @@
+module state
+import protelis:state:time
+
+def evolve( nos ) = 
+	T(nos, 1, { v -> v - 1})
+	
+evolve( 1000 )
+	

@@ -1,0 +1,8 @@
+module operator_c
+import operator_g
+import protelis:coord:accumulation
+
+def countDevices(source) =
+	C( distanceTo(source), sum, 1, 0)
+	
+countDevices(self.getDeviceUID().getId() == 0)
