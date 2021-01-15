@@ -1,0 +1,13 @@
+incarnation: protelis
+network-model:
+  type: ConnectWithinDistance
+  parameters: [10]
+displacements:
+  - in:
+      type: Circle
+      parameters: [300, 0, 0, 60]
+    programs: 
+      - 
+        - time-distribution: 1
+          program: max
+        - program: send

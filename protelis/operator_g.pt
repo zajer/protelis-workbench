@@ -1,0 +1,11 @@
+module gradient
+import protelis:coord:spreading
+
+public def distanceTo(source) 
+	{
+		let metric = {self.nbrRange() } ;
+		G(source, 0, metric, { v -> v + metric()})
+	}
+	
+distanceTo(self.getDeviceUID().getId() == 0)
+	

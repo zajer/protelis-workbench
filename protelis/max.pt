@@ -1,0 +1,19 @@
+module gradient
+
+public def signal_strength(source) =
+  rep (d <- 0) 
+  {
+    mux (source) 
+    { 
+    	100
+    } 
+    else 
+    {
+    	let nbr_max_signal =  nbr(d);
+    	let dist2nbr = self.nbrRange();
+    	foldMax( 0, nbr_max_signal - dist2nbr)
+    }
+  }
+
+signal_strength(self.getDeviceUID().getId() == 208)
+

@@ -11,10 +11,7 @@ public def gradient(source) =
     {
     	let nbr_dist =  nbr(d);
     	let dist_total = nbr_dist + self.nbrRange();
-    	let dist2nbr = self.nbrRange();
-    	//minHood([dist_total, POSITIVE_INFINITY]) 
-    	//minHood(dist_total)
-    	foldMin( POSITIVE_INFINITY, nbr_dist + dist2nbr)
+    	foldMin( POSITIVE_INFINITY, dist_total)
     }
   }
 
